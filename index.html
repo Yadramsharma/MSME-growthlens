@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MSME GrowthLens</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#home"><span class="brand-mark">M</span><span>MSME <b>GrowthLens</b></span></a>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#how">How It Works</a>
+    <a href="#analyze">Assessment</a>
+  </nav>
+  <button class="btn btn-primary" data-scroll="#analyze">Start Assessment</button>
+</header>
+
+<main>
+<section id="home" class="hero section">
+  <div class="hero-copy">
+    <span class="eyebrow">MSME GROWTH DIAGNOSTIC</span>
+    <h1>Find what's holding your business back.</h1>
+    <p>Enter your business data and get an indicative health score, key growth bottlenecks, and an actionable improvement roadmap.</p>
+    <div class="hero-actions">
+      <button class="btn btn-primary btn-lg" data-scroll="#analyze">Start Free Assessment →</button>
+      <button class="btn btn-ghost btn-lg" data-scroll="#how">See How It Works</button>
+    </div>
+    <div class="trust-row"><span>✓ Financial health</span><span>✓ Sales & customers</span><span>✓ Operations</span><span>✓ Digital readiness</span></div>
+  </div>
+  <div class="hero-card glass">
+    <div class="mini-head"><span>LIVE DIAGNOSTIC PREVIEW</span><span class="dot"></span></div>
+    <div class="score-ring"><div><strong>62</strong><small>/100</small></div></div>
+    <h3>Growth Health</h3>
+    <div class="mini-bars">
+      <div><span>Finance</span><i><b style="width:72%"></b></i><em>72</em></div>
+      <div><span>Sales</span><i><b style="width:41%"></b></i><em>41</em></div>
+      <div><span>Operations</span><i><b style="width:68%"></b></i><em>68</em></div>
+      <div><span>Marketing</span><i><b style="width:35%"></b></i><em>35</em></div>
+    </div>
+    <div class="alert-mini">⚠ Primary bottleneck: Customer Acquisition</div>
+  </div>
+</section>
+
+<section id="how" class="section section-muted">
+  <div class="section-title">
+    <span class="eyebrow">HOW IT WORKS</span>
+    <h2>From business data to a growth roadmap.</h2>
+  </div>
+  <div class="steps">
+    <article><span>01</span><h3>Enter your data</h3><p>Tell us about your business, finances, customers, operations and technology.</p></article>
+    <article><span>02</span><h3>Analyze</h3><p>The diagnostic engine scores six business dimensions using transparent rules.</p></article>
+    <article><span>03</span><h3>Identify bottlenecks</h3><p>See which areas need the most attention and the indicators behind them.</p></article>
+    <article><span>04</span><h3>Take action</h3><p>Get prioritized recommendations and an illustrative improvement scenario.</p></article>
+  </div>
+</section>
+
+<section id="analyze" class="section">
+  <div class="section-title">
+    <span class="eyebrow">MSME ASSESSMENT</span>
+    <h2>Build your business diagnostic</h2>
+    <p>Complete the steps below. You can go back and edit any section.</p>
+  </div>
+
+  <div class="progress-wrap">
+    <div class="progress-top"><span id="stepLabel">Business Profile</span><strong id="stepCount">1 / 6</strong></div>
+    <div class="progress"><i id="progressBar"></i></div>
+  </div>
+
+  <form id="assessmentForm" class="assessment-card">
+    <div class="form-step active" data-step="1">
+      <h3>Business Profile</h3>
+      <p class="muted">Basic information about the MSME.</p>
+      <div class="grid-2">
+        <label>Business / Company Name<input name="business_name" required placeholder="ABC Manufacturing"></label>
+        <label>Industry<select name="industry" required><option value="">Select industry</option><option>Manufacturing</option><option>Retail</option><option>Services</option><option>Food & Beverage</option><option>Agriculture</option><option>Textile</option><option>Construction</option><option>IT / Technology</option><option>Other</option></select></label>
+        <label>Location<input name="location" placeholder="Agra, Uttar Pradesh"></label>
+        <label>Year Established<input name="year_established" type="number" min="1900" max="2026" placeholder="2019"></label>
+        <label>Employees<input name="employees" type="number" min="0" required placeholder="18"></label>
+        <label>Business Type<select name="business_type"><option>Sole Proprietorship</option><option>Partnership</option><option>LLP</option><option>Private Limited</option><option>Other</option></select></label>
+      </div>
+    </div>
+
+    <div class="form-step" data-step="2">
+      <h3>Financial Health</h3>
+      <p class="muted">Use approximate annual figures if exact numbers are unavailable.</p>
+      <div class="grid-2">
+        <label>Annual Revenue / Turnover (₹)<input name="annual_revenue" type="number" min="0" step="0.01" required placeholder="4800000"></label>
+        <label>Annual Operating Expenses (₹)<input name="annual_expenses" type="number" min="0" step="0.01" required placeholder="4180000"></label>
+        <label>Annual Profit (₹)<input name="annual_profit" type="number" min="0" step="0.01" required placeholder="620000"></label>
+        <label>Outstanding Debt (₹)<input name="debt" type="number" min="0" step="0.01" placeholder="500000"></label>
+        <label>Cash Flow<select name="cash_flow"><option value="1">Very difficult</option><option value="2">Difficult</option><option value="3">Moderate</option><option value="4">Stable</option><option value="5">Very stable</option></select></label>
+        <label>Working Capital<select name="working_capital"><option value="1">Severe shortage</option><option value="2">Some shortage</option><option value="3">Adequate</option><option value="4">Comfortable</option></select></label>
+      </div>
+    </div>
+
+    <div class="form-step" data-step="3">
+      <h3>Sales & Customers</h3>
+      <p class="muted">Help the engine understand your market position.</p>
+      <div class="grid-2">
+        <label>Annual Sales Growth (%)<input name="sales_growth" type="number" step="0.1" required placeholder="4"></label>
+        <label>Customers / Month<input name="customers_month" type="number" min="0" placeholder="250"></label>
+        <label>New Customers / Month<input name="new_customers" type="number" min="0" placeholder="12"></label>
+        <label>Repeat Customers (%)<input name="repeat_customers" type="number" min="0" max="100" placeholder="18"></label>
+        <label>Marketing Spend / Month (₹)<input name="marketing_spend" type="number" min="0" placeholder="20000"></label>
+        <label>Main Sales Channel<select name="sales_channel"><option>Physical Store</option><option>Distributors</option><option>Website</option><option>Social Media</option><option>Marketplaces</option><option>Mixed</option></select></label>
+      </div>
+      <fieldset><legend>Biggest sales challenge</legend><div class="checks">
+        <label><input type="radio" name="sales_challenge" value="New customers"> New customers</label>
+        <label><input type="radio" name="sales_challenge" value="Retention"> Customer retention</label>
+        <label><input type="radio" name="sales_challenge" value="Competition"> Competition</label>
+        <label><input type="radio" name="sales_challenge" value="Pricing"> Pricing</label>
+        <label><input type="radio" name="sales_challenge" value="Marketing"> Marketing</label>
+        <label><input type="radio" name="sales_challenge" value="Distribution"> Distribution</label>
+      </div></fieldset>
+    </div>
+
+    <div class="form-step" data-step="4">
+      <h3>Operations</h3>
+      <p class="muted">Tell us how efficiently your business operates.</p>
+      <div class="grid-2">
+        <label>Maximum Monthly Capacity<input name="capacity" type="number" min="0" placeholder="1000"></label>
+        <label>Current Monthly Output<input name="output" type="number" min="0" placeholder="650"></label>
+      </div>
+      <fieldset><legend>Operational problems</legend><div class="checks">
+        <label><input type="checkbox" name="ops[]" value="Raw material"> Raw material shortage</label>
+        <label><input type="checkbox" name="ops[]" value="Supplier delays"> Supplier delays</label>
+        <label><input type="checkbox" name="ops[]" value="High cost"> High production cost</label>
+        <label><input type="checkbox" name="ops[]" value="Inventory"> Excess inventory</label>
+        <label><input type="checkbox" name="ops[]" value="Productivity"> Low productivity</label>
+        <label><input type="checkbox" name="ops[]" value="Equipment"> Equipment problems</label>
+        <label><input type="checkbox" name="ops[]" value="Quality"> Quality problems</label>
+        <label><input type="checkbox" name="ops[]" value="Delivery"> Delivery delays</label>
+      </div></fieldset>
+    </div>
+
+    <div class="form-step" data-step="5">
+      <h3>Digital & Technology</h3>
+      <p class="muted">Select the digital capabilities your business currently uses.</p>
+      <div class="digital-grid">
+        <label><input type="checkbox" name="digital[]" value="Website"> Website</label>
+        <label><input type="checkbox" name="digital[]" value="Social Media"> Social Media</label>
+        <label><input type="checkbox" name="digital[]" value="Digital Payments"> Digital Payments</label>
+        <label><input type="checkbox" name="digital[]" value="Accounting"> Digital Accounting</label>
+        <label><input type="checkbox" name="digital[]" value="Inventory"> Inventory Software</label>
+        <label><input type="checkbox" name="digital[]" value="CRM"> CRM</label>
+        <label><input type="checkbox" name="digital[]" value="ERP"> ERP</label>
+        <label><input type="checkbox" name="digital[]" value="Online Sales"> Online Sales</label>
+      </div>
+    </div>
+
+    <div class="form-step" data-step="6">
+      <h3>Challenges & Review</h3>
+      <p class="muted">Choose the problems that best describe your current situation.</p>
+      <div class="checks challenge-grid">
+        <label><input type="checkbox" name="challenges[]" value="Low sales"> Low sales</label>
+        <label><input type="checkbox" name="challenges[]" value="Lack of customers"> Lack of customers</label>
+        <label><input type="checkbox" name="challenges[]" value="High costs"> High operating costs</label>
+        <label><input type="checkbox" name="challenges[]" value="Working capital"> Lack of working capital</label>
+        <label><input type="checkbox" name="challenges[]" value="Cash flow"> Cash-flow problems</label>
+        <label><input type="checkbox" name="challenges[]" value="Competition"> Strong competition</label>
+        <label><input type="checkbox" name="challenges[]" value="Skilled workers"> Lack of skilled employees</label>
+        <label><input type="checkbox" name="challenges[]" value="Technology"> Technology gap</label>
+        <label><input type="checkbox" name="challenges[]" value="Marketing"> Poor marketing</label>
+        <label><input type="checkbox" name="challenges[]" value="Supply chain"> Supply-chain problems</label>
+        <label><input type="checkbox" name="challenges[]" value="Productivity"> Low productivity</label>
+        <label><input type="checkbox" name="challenges[]" value="Retention"> Customer retention</label>
+      </div>
+      <label class="full">Additional notes<textarea name="notes" rows="4" placeholder="Describe anything important about your business..."></textarea></label>
+      <div id="reviewBox" class="review-box"></div>
+    </div>
+
+    <div class="form-actions">
+      <button type="button" id="prevBtn" class="btn btn-ghost">← Back</button>
+      <button type="button" id="nextBtn" class="btn btn-primary">Next →</button>
+      <button type="submit" id="submitBtn" type="button" class="btn btn-primary hidden">Run Growth Diagnostic →</button>
+    </div>
+  </form>
+</section>
+
+<section id="analysis" class="section hidden">
+  <div class="analysis-card">
+    <span class="eyebrow">ANALYSIS ENGINE</span>
+    <h2 id="analysisTitle">Analyzing your business...</h2>
+    <p id="analysisText">Please wait while your assessment is processed.</p>
+    <div class="analysis-list">
+      <div class="analysis-item" id="a1">○ Business profile analyzed</div>
+      <div class="analysis-item" id="a2">○ Financial indicators analyzed</div>
+      <div class="analysis-item" id="a3">○ Sales & customer indicators analyzed</div>
+      <div class="analysis-item" id="a4">○ Operational indicators analyzed</div>
+      <div class="analysis-item" id="a5">○ Digital readiness analyzed</div>
+      <div class="analysis-item" id="a6">○ Identifying growth constraints...</div>
+    </div>
+    <div class="loader"><i></i></div>
+  </div>
+</section>
+
+
+<section id="dashboard" class="section hidden result-page">
+  <div class="dashboard-head result-topbar">
+    <div>
+      <span class="eyebrow">MSME GROWTH DIAGNOSTIC • RESULT</span>
+      <h2 id="dashName">Business Dashboard</h2>
+      <p id="dashMeta" class="muted"></p>
+    </div>
+    <div class="result-actions">
+      <button class="btn btn-ghost" onclick="window.print()">Print / Save PDF</button>
+      <button class="btn btn-primary" id="newAssessment">New Assessment</button>
+    </div>
+  </div>
+
+  <div class="result-hero">
+    <div class="panel score-card">
+      <div class="score-copy">
+        <span class="eyebrow">OVERALL GROWTH HEALTH</span>
+        <h3 id="scoreLabel">Moderate</h3>
+        <p class="muted">Indicative score based on the information provided.</p>
+        <div class="score-meaning">
+          <span><i class="legend-dot"></i> Stronger area</span>
+          <span><i class="legend-dot attention"></i> Needs attention</span>
+        </div>
+      </div>
+      <div class="score-ring-large" id="scoreRing">
+        <div><strong id="overallScore">0</strong><span>/100</span></div>
+      </div>
+    </div>
+
+    <div class="panel snapshot-card">
+      <div class="panel-head">
+        <div>
+          <span class="eyebrow">BUSINESS SNAPSHOT</span>
+          <h3>At a glance</h3>
+        </div>
+        <span class="status-pill" id="statusPill">Moderate</span>
+      </div>
+      <div class="snapshot snapshot-enhanced">
+        <div><span>Annual Revenue</span><b id="snapRevenue">₹0</b></div>
+        <div><span>Annual Profit</span><b id="snapProfit">₹0</b></div>
+        <div><span>Employees</span><b id="snapEmployees">0</b></div>
+        <div><span>Sales Growth</span><b id="snapGrowth">0%</b></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel health-panel">
+    <div class="panel-head">
+      <div>
+        <span class="eyebrow">BUSINESS HEALTH MAP</span>
+        <h3>Where your business stands</h3>
+      </div>
+      <span class="muted">Higher score = healthier indicator</span>
+    </div>
+    <div id="healthBars" class="health-bars enhanced-health"></div>
+  </div>
+
+  <div class="result-grid">
+    <div class="panel primary-bottleneck">
+      <div class="priority-header">
+        <div>
+          <span class="eyebrow">#1 PRIORITY</span>
+          <h2 id="primaryTitle">—</h2>
+        </div>
+        <div class="priority-score"><span>Attention</span><strong id="primaryScore">0</strong><small>/100</small></div>
+      </div>
+      <div class="bottleneck-message">
+        <span class="message-icon">!</span>
+        <p id="primaryReason"></p>
+      </div>
+      <h4>Evidence from your assessment</h4>
+      <ul id="primaryIndicators" class="evidence-list"></ul>
+    </div>
+
+    <div class="panel opportunity-panel">
+      <span class="eyebrow">GROWTH OPPORTUNITY</span>
+      <h3>Focus before expanding</h3>
+      <p id="opportunityText">Strengthen the weakest indicator first, then monitor the next two areas.</p>
+      <div id="secondaryList" class="secondary-list"></div>
+    </div>
+  </div>
+
+  <div class="panel action-panel">
+    <div class="panel-head action-heading">
+      <div>
+        <span class="eyebrow">ACTION PLAN</span>
+        <h3>Your recommended next steps</h3>
+      </div>
+      <span class="plan-badge">Priority-based</span>
+    </div>
+    <div id="recommendations" class="recommendations enhanced-recommendations"></div>
+  </div>
+
+  <div class="panel kpi-panel">
+    <div class="panel-head">
+      <div>
+        <span class="eyebrow">KEY INDICATORS</span>
+        <h3>Numbers to monitor monthly</h3>
+      </div>
+    </div>
+    <div id="kpiGrid" class="kpi-grid"></div>
+  </div>
+
+  <div class="panel simulator enhanced-simulator">
+    <div class="simulator-intro">
+      <span class="eyebrow">ILLUSTRATIVE SCENARIO</span>
+      <h2>See how improvement could change the picture</h2>
+      <p class="muted">Use the sliders to explore a scenario. This is not a guaranteed forecast.</p>
+    </div>
+    <div class="sim-grid">
+      <label>Marketing investment <input id="simMarketing" type="range" min="0" max="100000" value="20000" step="5000"><output id="simMarketingOut">₹20,000</output></label>
+      <label>Customer retention <input id="simRetention" type="range" min="0" max="80" value="18"><output id="simRetentionOut">18%</output></label>
+      <label>Capacity utilization <input id="simCapacity" type="range" min="20" max="100" value="65"><output id="simCapacityOut">65%</output></label>
+    </div>
+    <div class="scenario scenario-enhanced">
+      <div><span>Illustrative annual revenue range</span><strong id="scenarioRevenue">₹0 – ₹0</strong></div>
+      <small>Scenario values are generated from the assessment inputs and are intended for demonstration.</small>
+    </div>
+  </div>
+
+  <div class="panel report-panel">
+    <div>
+      <span class="eyebrow">REPORT</span>
+      <h3>Ready to share</h3>
+      <p class="muted">Print or save this result as a PDF for your project demonstration.</p>
+    </div>
+    <button class="btn btn-primary" onclick="window.print()">Print / Save Report</button>
+  </div>
+</section>
+
+</main>
+
+<footer><p>MSME GrowthLens • Prototype for MSME growth diagnostics</p></footer>
+<script src="app.js?v=20260924-2"></script>
+</body>
+</html>
